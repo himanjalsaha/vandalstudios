@@ -133,18 +133,18 @@ const Hero = () => {
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-24 px-5 sm:px-10">
             <h1 className="special-font hero-heading text-blue-100">
-              Desig<b>n</b>ing <b className="text-yellow-200">*</b>
+              Desig<b>n</b>ing <b className="text-yellow-400">*</b>
             </h1>
 
             <p className="mb-5 max-w-64 font-robert-regular text-xl md:text-4xl text-nowrap text-blue-100">
-              we design impact <b className="text-yellow-200">*</b><br /> for the plot <b className="text-yellow-200">*</b>
+              we design impact <b className="text-yellow-400">*</b><br /> for the plot <b className="text-yellow-400">*</b>
             </p>
 
             <Button
               id="watch-trailer"
               title="Contact us"
               leftIcon={<TiLocationArrow />}
-              containerClass="bg-yellow-300 flex-center gap-1"
+              containerClass="bg-yellow-400 flex-center gap-1"
             />
           </div>
         </div>
