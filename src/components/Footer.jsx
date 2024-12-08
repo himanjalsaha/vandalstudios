@@ -4,7 +4,7 @@ import { ImInstagram } from "react-icons/im";
 
 export default function Component() {
   return (
-    <div className="p-5 md:p-10 font-robert-medium">
+    <div className="my-10 min-h-96 w-screen  px-6 font-robert-regular" >
       <footer className="bg-[#101012] h-full text-white py-12 px-6 rounded-3xl relative overflow-hidden">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-start relative z-10">
           <div className="mb-8 md:mb-0">
@@ -97,11 +97,16 @@ export default function Component() {
             </a>
           </div>
         </div>
-        <div className="bottom-5">
-          <h1 className="text-[20vw] font-bold leading-none text-gray-800 opacity-20">
-            VANDAL
-          </h1>
-        </div>
+      
+        <div className="overflow-hidden absolute bottom-0   text-center" style={{ height: '14rem' }}>
+  <h1 className="text-[20vw] font-robert-medium  font-extrabold leading-none text-gray-800 opacity-20">
+    vandal
+  </h1>
+</div>
+
+<div className=" h-48"></div>
+
+   
       </footer>
     </div>
   );

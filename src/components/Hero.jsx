@@ -74,7 +74,7 @@ const Hero = () => {
     });
   });
 
-  const getVideoSrc = (index) => `videos/hero-1.mp4`;
+  const getVideoSrc = (index) => `videos/hero.mp4`;
 
   return (
     <div className="relative h-dvh w-screen overflow-x-hidden">
@@ -136,7 +136,7 @@ const Hero = () => {
               Desig<b>n</b>ing <b className="text-yellow-200">*</b>
             </h1>
 
-            <p className="mb-5 max-w-64 font-robert-regular text-xl text-blue-100">
+            <p className="mb-5 max-w-64 font-robert-regular text-xl md:text-4xl text-nowrap text-blue-100">
               we design impact <b className="text-yellow-200">*</b><br /> for the plot <b className="text-yellow-200">*</b>
             </p>
 

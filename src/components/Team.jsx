@@ -5,36 +5,25 @@ import { TiLocationArrow } from "react-icons/ti";
 
 const teamMembers = [
   {
-    name: "John Doe",
+    name: "Creaxr",
     role: "Founder & CEO",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D",
+    image: "https://vandal-vert.vercel.app/_next/image?url=https%3A%2F%2Fmir-s3-cdn-cf.behance.net%2Fuser%2F230%2F2aa7db341599339.665768e8816e6.jpg&w=1920&q=75",
     description: "Visionary leader with a passion for innovation and design.",
     size: "large",
   },
   {
-    name: "Jane Smith",
-    role: "Creative Director",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D",
-    description: "Award-winning designer with an eye for detail and aesthetics.",
+    name: "Saizou",
+    role: "Motion Graphics Designer",
+    image: "https://vandal-vert.vercel.app/_next/image?url=https%3A%2F%2Fmir-s3-cdn-cf.behance.net%2Fuser%2F230%2F5fb1f51665061643.665b41e46ad23.png&w=1920&q=75",
+    description:"\n \n",
   },
   {
-    name: "Mike Johnson",
-    role: "Lead Developer",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D",
-    description: "Experienced full-stack developer and technology enthusiast.",
+    name: "hyper",
+    role: "3d graphics",
+    image: "https://vandal-vert.vercel.app/_next/image?url=https%3A%2F%2Fmir-s3-cdn-cf.behance.net%2Fuser%2F230%2F37f83f1307089043.665b00815c77e.jpg&w=1920&q=75",
+    description: "\n \n",
   },
-  {
-    name: "Emily Brown",
-    role: "Marketing Manager",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D",
-    description: "Strategic thinker with a knack for brand storytelling.",
-  },
-  {
-    name: "Alex Lee",
-    role: "UX Designer",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhlYWRzaG90fGVufDB8fDB8fHww",
-    description: "User-centric designer focused on creating intuitive experiences.",
-  },
+
 ];
 
 const TeamMembers = () => (
@@ -64,28 +53,14 @@ const TeamMembers = () => (
           <TeamMemberCard {...teamMembers[2]} />
         </BentoTilt>
         
-        <BentoTilt className="md:col-span-1 md:row-span-1">
-          <TeamMemberCard {...teamMembers[3]} />
-        </BentoTilt>
-        
-        <BentoTilt className="md:col-span-1 md:row-span-1">
-          <TeamMemberCard {...teamMembers[4]} />
-        </BentoTilt>
-        
-        <BentoTilt className="md:col-span-2 md:row-span-1">
-          <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-lg bg-violet-300 p-8">
-            <div className="text-center">
-              <h3 className="special-font mb-4 text-3xl text-black">
-                Join Our Team
-              </h3>
-              <p className="mb-4 font-circular-web text-black">Be part of our creative journey and help shape the future of design.</p>
-              <div className="flex justify-center">
-                <button className="flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm text-white transition-colors hover:bg-opacity-80">
-                  <TiLocationArrow />
-                  <span className=" text-nowrap">Join us</span>
-                </button>
-              </div>
-            </div>
+      
+        <BentoTilt className="bento-tilt_2">
+          <div className="flex size-full flex-col justify-between bg-[#DAA90F] p-5">
+            <h1 className="bento-title special-font max-w-64 text-black">
+              J<b>o</b>IN U<b>S</b>
+            </h1>
+
+            <TiLocationArrow className="m-5 scale-[5] self-end" />
           </div>
         </BentoTilt>
       </div>

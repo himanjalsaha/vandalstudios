@@ -31,7 +31,7 @@ const TeamMemberCard = ({ image, name, role, description, size = "normal" }) => 
           <h2 className={`bento-title special-font ${size === 'large' ? 'text-4xl' : 'text-2xl'}`}>{name}</h2>
           <p className={`mt-2 font-semibold ${size === 'large' ? 'text-lg' : 'text-sm'}`}>{role}</p>
           {description && (
-            <p className={`mt-4 max-w-64 ${size === 'large' ? 'text-base' : 'text-xs md:text-sm'}`}>{description}</p>
+            <p className={`mt-20 max-w-64 ${size === 'large' ? 'text-base' : 'text-xs md:text-sm'}`}>{description}</p>
           )}
         </div>
 

@@ -6,7 +6,7 @@ import Button from "./Button";
 const HeroImages = () => {
   const [loading, setLoading] = useState(true);
   const imageUrl =
-    "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/453d3b199986965.665ab18cd4a01.jpg";
+    "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/da80a0199986965.665ab18cd2d88.png";
 
   const handleImageLoad = () => {
     setLoading(false);
@@ -60,10 +60,10 @@ const HeroImages = () => {
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-24 px-5 sm:px-10">
             <h1 className="special-font hero-heading text-white ">
-              kn<b>o</b>w <b  className=" text-yellow-400">*</b>
+              kn<b>o</b><b className="">w</b> <b  className=" text-yellow-40">*</b>
             </h1>
 
-            <p className="mb-5 max-w-64 font-robert-regular text-xl text-gray-200">
+            <p className="mb-5 max-w-64 font-robert-regular text-xl md:text-4xl text-nowrap text-gray-200">
               We design impact <b className="text-yellow-200">*</b>
               <br /> for the plot <b className="text-yellow-200">*</b>
             </p>
