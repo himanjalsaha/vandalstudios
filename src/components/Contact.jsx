@@ -1,5 +1,6 @@
 import AnimatedTitle from "./AnimatedTitle";
 import Button from "./Button";
+import ContactModal from "./ContactModal";
 
 const ImageClipBox = ({ src, clipClass }) => (
   <div className={clipClass}>
@@ -17,8 +18,8 @@ const Contact = () => {
             clipClass="contact-clip-path-1 "
           />
           <ImageClipBox
-            src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/e8f230199986965.665ab18933b30.gif"
-            clipClass="contact-clip-path-2 lg:translate-y-60 translate-y-80"
+            src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/353b2a199986965.665ab18928e1d.png"
+            clipClass="contact-clip-path-2 lg:translate-y-80 translate-y-80"
           />
         </div>
 
@@ -44,7 +45,7 @@ const Contact = () => {
 
           />
 
-          <Button title="contact us" containerClass="mt-10 cursor-pointer" />
+          <ContactModal/>
         </div>
       </div>
     </div>

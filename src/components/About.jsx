@@ -1,66 +1,82 @@
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
+'use client'
 
-import AnimatedTitle from "./AnimatedTitle";
+import { useRef } from 'react'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import AnimatedTitle from './AnimatedTitle'
+import desktopImage from '../../public/img/land.png'
+import mobileImage from '../../public/img/mobile.png'
+gsap.registerPlugin(ScrollTrigger)
 
-gsap.registerPlugin(ScrollTrigger);
+const About = ({imageStyle , desktopImageurl = desktopImage , mobileImageurl = mobileImage}) => {
+  const clipRef = useRef(null)
+  const maskRef = useRef(null)
+  const imageRef = useRef(null)
 
-const About = () => {
   useGSAP(() => {
+    if (!clipRef.current || !maskRef.current || !imageRef.current) return
+
     const clipAnimation = gsap.timeline({
       scrollTrigger: {
-        trigger: "#clip",
-        start: "center center",
-        end: "+=800 center",
+        trigger: clipRef.current,
+        start: 'center center',
+        end: '+=800 center',
         scrub: 0.5,
         pin: true,
         pinSpacing: true,
       },
     })
 
-    clipAnimation.to(".mask-clip-path", {
-      width: "100vw",
-      height: "100vh",
-     
-      borderRadius: 0,
-    }).to(".about-image img", {
+    clipAnimation
+      .to(maskRef.current, {
+        width: '100dvw',
+        height: '100dvh',
+        borderRadius: 0,
+      })
+      .to(imageRef.current, {
         padding: 0,
-      }, "<");
-  });
+      }, '<')
+  }, [])
 
   return (
-    <div id="about" className="min-h-screen w-screen">
+    <section id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-        <p className="font-general text-2xl uppercase md:text-xl">
+        <p className="font-general text-sm uppercase md:text-[10px]">
           we are vandal *
         </p>
 
         <AnimatedTitle
-   title="From bland <br /> to <b>b</b>rilliant  "
+          title="From bland <br /> to <b>b</b>rilliant"
           containerClass="mt-5 !text-black text-center hero-heading"
         />
 
-       <div className="about-subtext">
-  <p>Crafting designs that redefine your vision—where creativity meets innovation.</p>
-  <p className="text-gray-500">
-    At Vandal Studios, we transform ideas into impactful designs, blending expertise with passion to create a legacy of brilliance.
-  </p>
-</div>
+<div className="about-subtext     max-w-2xl text-center">
+          <p className="mb-2">Crafting designs that redefine your vision—where creativity meets innovation.</p>
+          <p className="text-gray-500">
+            At Vandal Studios, we transform ideas into impactful designs, blending expertise with passion to create a legacy of brilliance.
+          </p>
+        </div>
 
+     
       </div>
 
-      <div className="h-dvh w-screen" id="clip">
-        <div className="mask-clip-path   about-image">
-          <img
-            src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/fdf869199986965.665ab1893343c.jpg"
-            alt="Background"
-            className="absolute p-10 md:p-0     left-0 top-0   size-full object-cover"
-          />
+      <div ref={clipRef} className="h-dvh w-screen ">
+        <div ref={maskRef} className={`mask-clip-path ${imageStyle}`}>
+        <picture>
+            <source media="(min-width: 768px)" srcSet={desktopImageurl} />
+            <img
+              ref={imageRef}
+              src={mobileImageurl}
+              alt="Vandal Studios Design Showcase"
+              className="absolute left-0 top-0 h-full w-full object-cover p-10 md:p-0"
+            />
+          </picture>
         </div>
       </div>
-    </div>
-  );
-};
+    </section>
+  )
+}
 
-export default About;
+export default About
+

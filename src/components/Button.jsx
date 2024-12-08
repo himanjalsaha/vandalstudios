@@ -1,6 +1,7 @@
-import clsx from "clsx";
+import React from 'react';
+import clsx from 'clsx';
 
-const Button = ({ id, title, rightIcon, leftIcon, containerClass }) => {
+const Button = ({ id, title, rightIcon, leftIcon, containerClass, onClick }) => {
   return (
     <button
       id={id}
@@ -8,6 +9,7 @@ const Button = ({ id, title, rightIcon, leftIcon, containerClass }) => {
         "group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-50 px-7 py-3 text-black",
         containerClass
       )}
+      onClick={onClick}
     >
       {leftIcon}
 
@@ -26,3 +28,4 @@ const Button = ({ id, title, rightIcon, leftIcon, containerClass }) => {
 };
 
 export default Button;
+
