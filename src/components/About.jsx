@@ -32,7 +32,7 @@ const About = () => {
   return (
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-        <p className="font-general text-4xl uppercase md:text-4xl">
+        <p className="font-general text-2xl uppercase md:text-xl">
           we are vandal *
         </p>
 
